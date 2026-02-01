@@ -26,7 +26,7 @@ const increment = () => {
 
   <main class="flex flex-1 py-2 px-4 flex-col w-full">
     <section class="flex flex-col h-full w-full items-center justify-center">
-      <div class="h-48">
+      <div class="flex items-center justify-center h-48 aspect-cubic">
         <img
           src="/pivo.svg"
           alt="pivo"
