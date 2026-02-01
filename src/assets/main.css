@@ -52,28 +52,6 @@
   --animate-ellipse-appearance: ellipseAppearance var(--animate-ellipse);
 }
 
-@layer base {
-  .text-base {
-    font-size: var(--fs-base);
-  }
-
-  .text-mini {
-    font-size: var(--fs-mini);
-    color: var(--fg-mini-text);
-  }
-}
-
-@layer components {
-  .page {
-    color: var(--fg-default);
-    font-size: var(--fs-base);
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -113,13 +91,6 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
-}
-
-span,
-a,
-p,
-button {
-  font-size: 16px;
 }
 
 .page-center {
@@ -181,4 +152,26 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@layer base {
+  .text-base {
+    font-size: var(--fs-base);
+  }
+
+  .text-mini {
+    font-size: var(--fs-mini);
+    color: var(--fg-mini-text);
+  }
+}
+
+@layer components {
+  .page {
+    color: var(--fg-default);
+    font-size: var(--fs-base);
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
