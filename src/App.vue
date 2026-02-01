@@ -43,6 +43,8 @@ const increment = () => {
       <span>Разработчик: The Void Community</span>
       <span>Идея: Valentin Bird</span>
     </div>
+
+    <span class="text-xs">From LAF with love</span>
   </main>
 
   <footer
