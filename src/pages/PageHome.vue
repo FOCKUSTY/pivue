@@ -1,3 +1,40 @@
+<template>
+  <section class="flex flex-col h-full w-full items-center justify-center">
+    <div class="flex items-end justify-center h-48 aspect-cubic">
+      <img
+        src="/pivo-empty.svg"
+        alt="pivo"
+        ref="pivoEmpty"
+        class="absolute h-48 transition-all duration-200 aspect-cubic noselect"
+        style="opacity: 0"
+      />
+
+      <img
+        src="/pivo.svg"
+        alt="pivo"
+        ref="pivo"
+        class="z-1 h-48 active:h-40 transition-all duration-200 cursor-pointer noselect"
+        @click="
+          () => {
+            increment();
+            drinkPivo();
+          }
+        "
+      />
+    </div>
+
+    <span>{{ text }}</span>
+  </section>
+
+  <div class="flex flex-col text-mini">
+    <span class="text-xs">Примечание</span>
+    <span>Разработчик: The Void Community</span>
+    <span>Идея: Valentin Bird</span>
+  </div>
+
+  <span class="text-xs">From LAF with love</span>
+</template>
+
 <script setup lang="ts">
 import { ref, useTemplateRef } from "vue";
 const count = ref<number>(0);
@@ -44,40 +81,3 @@ const drinkPivo = () => {
   }, 2000);
 };
 </script>
-
-<template>
-  <section class="flex flex-col h-full w-full items-center justify-center">
-    <div class="flex items-end justify-center h-48 aspect-cubic">
-      <img
-        src="/pivo-empty.svg"
-        alt="pivo"
-        ref="pivoEmpty"
-        class="absolute h-48 transition-all duration-200 aspect-cubic noselect"
-        style="opacity: 0"
-      />
-
-      <img
-        src="/pivo.svg"
-        alt="pivo"
-        ref="pivo"
-        class="z-1 h-48 active:h-40 transition-all duration-200 cursor-pointer noselect"
-        @click="
-          () => {
-            increment();
-            drinkPivo();
-          }
-        "
-      />
-    </div>
-
-    <span>{{ text }}</span>
-  </section>
-
-  <div class="flex flex-col text-mini">
-    <span class="text-xs">Примечание</span>
-    <span>Разработчик: The Void Community</span>
-    <span>Идея: Valentin Bird</span>
-  </div>
-
-  <span class="text-xs">From LAF with love</span>
-</template>
